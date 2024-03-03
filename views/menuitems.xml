@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <menuitem
+        id="manu_email_validations"
+        name="Email Validations"
+        groups="base.group_no_one"
+        parent="contacts.res_partner_menu_config"
+        sequence="10"/>
+
+    <menuitem
+        id="manu_dicposable_check_results"
+        action="action_dicposable_check_results"
+        groups="base.group_no_one"
+        parent="manu_email_validations"
+        sequence="10" />
+
+    <menuitem
+        id="manu_email_confirmation"
+        action="action_email_confirmation"
+        groups="base.group_no_one"
+        parent="manu_email_validations"
+        sequence="10" />
+
+</odoo>

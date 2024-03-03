@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="partner_email_confirmation_tree" model="ir.ui.view">
+        <field name="name">partner.email.confirmation.tree</field>
+        <field name="model">partner.email.confirmation</field>
+        <field name="arch" type="xml">
+            <tree string="Email Confirmations">
+                <field name="name" />
+                <field name="partner_id" />
+                <field name="state" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_email_confirmation" model="ir.actions.act_window">
+        <field name="name">Partner Email Confirmation Results</field>
+        <field name="res_model">partner.email.confirmation</field>
+        <field name="view_mode">tree</field>
+    </record>
+
+</odoo>

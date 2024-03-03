@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="update_email_confirmations" model="ir.cron">
+        <field name="name">Update Email Confirmations</field>
+        <field name="model_id" ref="model_partner_email_confirmation"/>
+        <field name="interval_number">5</field>
+        <field name="interval_type">minutes</field>
+        <field name="numbercall">-1</field>
+        <field name="state">code</field>
+        <field name="code">model._update_confirmation_states()</field>
+    </record>
+
+</odoo>

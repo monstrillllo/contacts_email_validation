@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="disposable_email_check_result_tree" model="ir.ui.view">
+        <field name="name">disposable.email.check.result.tree</field>
+        <field name="model">disposable.email.check.result</field>
+        <field name="arch" type="xml">
+            <tree string="Results">
+                <field name="partner_id" />
+                <field name="name" />
+                <field name="is_disposable" />
+            </tree>
+        </field>
+    </record>
+    
+    <record id="action_dicposable_check_results" model="ir.actions.act_window">
+        <field name="name">Disposable Email Check Results</field>
+        <field name="res_model">disposable.email.check.result</field>
+        <field name="view_mode">tree</field>
+    </record>
+
+</odoo>

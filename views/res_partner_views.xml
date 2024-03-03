@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="res_partner_form_email_validation" model="ir.ui.view">
+        <field name="name">res.partner.form.email.validation</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <sheet position="before">
+                <header>
+                    <button string="Send Email Confirmation" name="action_send_email_confirmation" type="object" groups="base.group_partner_manager" class="oe_highlight"/>
+                </header>
+            </sheet>
+            <xpath expr="//field[@name='email']/.." position="after">
+                <field class="alert alert-warning" colspan="2" nolabel="1" role="alert" name="email_format_error" invisible="not email_format_error"/>
+                <field class="alert alert-warning" colspan="2" nolabel="1" role="alert" name="email_disposable_error" invisible="not email_disposable_error"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+disposable_email_check_result_manager,disposable.email.check.result.manager,model_disposable_email_check_result,base.group_partner_manager,1,1,1,1
+disposable_email_check_result_user,disposable.email.check.result.user,model_disposable_email_check_result,base.group_user,1,0,0,0
+partner_email_confirmation_manager,partner.email.confirmation.manager,model_partner_email_confirmation,base.group_partner_manager,1,1,1,1
+partner_email_confirmation_user,partner.email.confirmation.user,model_partner_email_confirmation,base.group_user,1,0,0,0
