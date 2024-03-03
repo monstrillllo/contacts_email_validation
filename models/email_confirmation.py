@@ -9,7 +9,7 @@ class EmailConfirmation(models.Model):
     _description = "Partner Email Confirmation"
 
     name = fields.Char(string="email", required=True)
-    partner_id = fields.Many2one("res.partner", "Partner", required=True)
+    partner_id = fields.Many2one("res.partner", "Partner", required=True, ondelete="cascade")
     state = fields.Selection([
         ['pending', 'Pending'],
         ['expired', 'Expired'],

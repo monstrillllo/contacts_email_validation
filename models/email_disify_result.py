@@ -6,5 +6,5 @@ class DisposableEmaileCheckResult(models.Model):
     _description = "Results of checking emails for disposable"
 
     name = fields.Char("Email")
-    partner_id = fields.Many2one("res.partner", "Partner")
+    partner_id = fields.Many2one("res.partner", "Partner", ondelete="cascade")
     is_disposable = fields.Boolean(default=False, string="Is Disposable")
